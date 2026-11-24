@@ -1,8 +1,9 @@
 site_name: 証券業務ナレッジ入門
 site_description: 新人・他部署の方向けに、証券業務の仕組みを公開情報にもとづいてやさしく解説するナレッジサイト
 site_url: https://nagashimashu.github.io/securities-knowledge/
-# サイトからGitHubへのリンク（右上のリポジトリ表示・記事の編集ボタン）は意図的に出していません。
-# 表示する場合は repo_url と edit_uri を追加してください。
+repo_url: https://github.com/nagashimashu/securities-knowledge
+repo_name: securities-knowledge
+edit_uri: edit/main/docs/
 copyright: >-
   本サイトは個人が運営する情報提供サイトであり、投資勧誘・投資助言を目的とするものではありません。
   文章は <a href="https://creativecommons.org/licenses/by/4.0/deed.ja">CC BY 4.0</a> で提供しています。
@@ -19,6 +20,7 @@ theme:
     - search.suggest
     - search.highlight
     - content.tooltips
+    - content.action.edit
     - toc.follow
   palette:
     - media: "(prefers-color-scheme: light)"

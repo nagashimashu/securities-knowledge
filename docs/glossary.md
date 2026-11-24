@@ -127,4 +127,4 @@ SQ（エスキュー）
 ---
 
 !!! tip "用語の追加"
-    追加してほしい用語があれば Issue でお知らせください。用語は「定義（1〜2文）＋関連記事へのリンク」の形で書きます。
+    追加してほしい用語があれば[追加リクエスト（GitHub Issue）](https://github.com/nagashimashu/securities-knowledge/issues/new?template=article-request.yml)でお知らせください。用語は「定義（1〜2文）＋関連記事へのリンク」の形で書きます。

@@ -62,4 +62,7 @@ hide:
 
 ## 誤りを見つけたら
 
-内容の誤りや古くなった情報にお気づきの場合は、リポジトリの Issue からお知らせください。
+内容の誤りや古くなった情報にお気づきの場合は、[誤り報告フォーム（GitHub Issue）](https://github.com/nagashimashu/securities-knowledge/issues/new?template=error-report.yml)からお知らせください。解説してほしいテーマや用語の追加は、[追加リクエスト](https://github.com/nagashimashu/securities-knowledge/issues/new?template=article-request.yml)からどうぞ。
+
+!!! note "報告にはGitHubアカウントが必要です"
+    フォームの利用には無料のGitHubアカウントが必要です。個別の投資・税務相談にはお答えできません。
