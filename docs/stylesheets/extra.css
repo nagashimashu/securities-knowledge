@@ -1,0 +1,16 @@
+/* 「3行でいうと」ボックスなど、入門向けの読みやすさ調整 */
+.md-typeset {
+  line-height: 1.8;
+}
+.md-typeset h2 {
+  border-bottom: 1px solid var(--md-default-fg-color--lightest);
+  padding-bottom: 0.2em;
+}
+.article-meta {
+  font-size: 0.75rem;
+  color: var(--md-default-fg-color--light);
+  margin-bottom: 1.5em;
+}
+.md-typeset .grid.cards > ul > li {
+  border-radius: 0.4rem;
+}

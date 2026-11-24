@@ -1,0 +1,116 @@
+site_name: 証券業務ナレッジ入門
+site_description: 新人・他部署の方向けに、証券業務の仕組みを公開情報にもとづいてやさしく解説するナレッジサイト
+# GitHub Pages で公開する際に <ユーザー名> を書き換え、3行の先頭の「# 」を外してください
+site_url: https://nagashimashu.github.io/securities-knowledge/
+repo_url: https://github.com/nagashimashu/securities-knowledge
+edit_uri: edit/main/docs/
+copyright: >-
+  本サイトは個人が運営する情報提供サイトであり、投資勧誘・投資助言を目的とするものではありません。
+  文章は <a href="https://creativecommons.org/licenses/by/4.0/deed.ja">CC BY 4.0</a> で提供しています。
+
+theme:
+  name: material
+  language: ja
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - navigation.indexes
+    - navigation.footer
+    - search.suggest
+    - search.highlight
+    - content.tooltips
+    - toc.follow
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: teal
+      toggle:
+        icon: material/weather-night
+        name: ダークモードに切り替え
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: teal
+      toggle:
+        icon: material/weather-sunny
+        name: ライトモードに切り替え
+  icon:
+    logo: material/book-open-variant
+
+plugins:
+  - search:
+      lang: ja
+  - tags
+
+extra_css:
+  - stylesheets/extra.css
+
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.snippets:
+      auto_append:
+        - includes/abbreviations.md
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+
+nav:
+  - ホーム: index.md
+  - はじめに:
+      - 証券会社って何をしているの？: basics/what-securities-company-does.md
+      - 学習ロードマップ: guide/roadmap.md
+  - 用語集: glossary.md
+  - 証券取引の流れ:
+      - flow/index.md
+      - 口座開設：本人確認と適合性の原則: flow/account-opening.md
+      - 注文の出し方：成行・指値と売買単位: flow/order-types.md
+      - 約定から決済まで：T+2とは: flow/settlement-t2.md
+      - 清算と決済の仕組み：JSCCとほふり: flow/clearing.md
+      - 顧客資産の保護：分別管理と投資者保護基金: flow/asset-protection.md
+  - 商品の基礎:
+      - products/index.md
+      - 株式: products/stocks.md
+      - 債券: products/bonds.md
+      - 投資信託: products/investment-trusts.md
+      - ETF・REIT: products/etf-reit.md
+      - 信用取引: products/margin-trading.md
+      - デリバティブ入門: products/derivatives.md
+      - 外国証券: products/foreign-securities.md
+  - ルールと規制:
+      - rules/index.md
+      - 金融商品取引法のポイント: rules/fiea.md
+      - 適合性原則と説明義務: rules/suitability.md
+      - インサイダー取引規制: rules/insider-trading.md
+      - マネロン対策（犯収法）: rules/aml.md
+      - 顧客本位の業務運営: rules/fiduciary.md
+  - 税金:
+      - tax/index.md
+      - 特定口座と一般口座: tax/specified-account.md
+      - NISAの仕組み: tax/nisa.md
+      - 譲渡益・配当の課税と損益通算: tax/capital-gains.md
+  - 市場のしくみ:
+      - market/index.md
+      - 取引所とPTS: market/exchanges-pts.md
+      - 株価はどう決まる？：板・気配・値幅制限: market/price-formation.md
+  - このサイトについて:
+      - 免責事項: about/disclaimer.md
+      - 出典・引用ポリシー: about/sources-policy.md
+      - 執筆ガイド: about/contributing.md

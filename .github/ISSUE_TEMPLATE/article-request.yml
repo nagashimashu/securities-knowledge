@@ -1,0 +1,15 @@
+name: 記事・用語の追加リクエスト
+description: 解説してほしいテーマや、用語集に追加してほしい用語を提案する
+title: "[追加リクエスト] "
+labels: ["追加リクエスト"]
+body:
+  - type: input
+    id: topic
+    attributes:
+      label: テーマまたは用語
+    validations:
+      required: true
+  - type: textarea
+    id: reason
+    attributes:
+      label: 知りたいこと・つまずいた点

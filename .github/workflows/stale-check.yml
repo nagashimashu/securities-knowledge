@@ -1,0 +1,31 @@
+name: Stale article check
+
+# 毎月1日に、最終確認日から180日を過ぎた記事を Issue で知らせる
+on:
+  schedule:
+    - cron: "0 0 1 * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install pyyaml
+      - name: Find stale articles
+        run: python scripts/check_articles.py --stale-days 180 --report stale.md
+      - name: Open issue if any
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if [ -s stale.md ]; then
+            gh issue create --title "要再確認の記事があります（$(date +%Y-%m)）" --body-file stale.md --label stale || \
+            gh issue create --title "要再確認の記事があります（$(date +%Y-%m)）" --body-file stale.md
+          fi

@@ -1,0 +1,26 @@
+name: 内容の誤り・古い情報の報告
+description: 記事の誤りや、制度改正などで古くなった情報を知らせる
+title: "[誤り報告] "
+labels: ["誤り報告"]
+body:
+  - type: input
+    id: page
+    attributes:
+      label: 該当ページのURL
+      placeholder: https://...
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: 誤っている（古い）と思われる記述
+      description: 該当する文をそのまま貼り付けてください。
+    validations:
+      required: true
+  - type: textarea
+    id: correction
+    attributes:
+      label: 正しいと思われる内容と、その根拠（一次情報のURL）
+      description: 法令・金融庁・日本証券業協会・取引所などの公開情報のURLがあると助かります。
+    validations:
+      required: true
